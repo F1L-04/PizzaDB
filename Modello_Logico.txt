@@ -1,0 +1,18 @@
+﻿Modello Logico
+
+
+Pizzeria (ID, N_Telefono, Indirizzo)
+Dipendente (Matricola,Nome,Cognome,Ruolo,#tavoli,ID)
+Ordine ( N_Ordine, Stato, Tavolo*,Orario,Matricola,Codice)
+Pizza ( Nome, Prezzo)
+Cliente ( Codice, Nominativo, N_Telefono)
+Compresa ( Nome_P, Num_Ordine)
+Recapito (Numero, Matricola)
+
+
+Dipendente(ID) V.I.R. Pizzeria(ID)
+Ordine(Matricola) V.I.R. Dipendente(Matricola)
+Ordine(Codice) V.I.R. Cliente(Codice)
+Compresa(Nome_P) V.I.R. Pizza(Nome)
+Compresa(Num_Ordine) V.I.R. Ordine(N_Ordine)
+Recapito(Matricola) V.I.R. Dipendente(Matricola)
